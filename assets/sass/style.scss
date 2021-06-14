@@ -1,0 +1,1125 @@
+@import "color";
+/*minhas classes padrao*/
+@mixin positionFixa {
+    position: fixed;
+	width: 100%;
+	background-color: #039be5;
+	align-items: center;
+	z-index: 99;
+}
+@mixin container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+@mixin container1 {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@mixin alinheDisplay {
+    display: flex;
+}
+
+@mixin clear {
+    clear: both;
+}
+@mixin section {
+	position: relative;
+	top: 90px;
+}
+@mixin line {
+    width: 200px;
+    height: 3px;
+    background-color: #039be5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
+body{
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/**/
+
+/*meu header*/
+header {
+    width: $w100;
+    background-color: $color-nav;
+    .marca-pratrocinio{
+        .container{
+            margin: 0 auto;
+            max-width: 1280px;
+            position: relative;
+            top: -80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            img{
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+div.nav-bar{
+    width: $w100;
+    background-color: $color-nav;
+    @include positionFixa();
+}
+
+.alinhe__com__display{
+    @include alinheDisplay();
+    justify-content: space-around;
+}
+
+.logo1{
+    display: none;
+}
+
+.logo {
+    padding: 50px 100px;
+    background-image: url(../imagens/logo.svg);
+    background-size: 70% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.nav-links {
+    padding: 30px 0;
+}
+
+div.nav-links {
+    nav{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+div.nav-links{
+    nav{
+        ul{
+            list-style-type: none;
+        }
+    }
+}
+
+div.nav-links{
+    nav{
+        ul{
+            li{
+                display: inline-block;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+div.nav-links{
+    nav{
+        ul{
+            li{
+                a{
+                    color: $cor-branca;
+                    font-size: 19px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+div.nav-links nav ul li:first-child a {
+	border-bottom: 2px solid $cor-branca;
+}
+
+div.nav-links nav ul li:hover a{
+	border-bottom: 2px solid $cor-branca;
+}
+
+.Menu__Mobile{
+    display: none;
+    color: white;
+	font-size: 23px;
+	cursor: pointer;
+	margin-top: 30px;
+	margin-left: 4%;
+	width: 32px;
+	height: 32px;
+}
+
+nav.Menu__Mobile ul{
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	width: 100%;
+	max-width: 700px;
+	transform: translateX(-50%);
+	list-style-type: none;
+	background-color: rgba(255, 255, 255, 0.884);
+	display: none;
+}
+
+nav.Menu__Mobile ul li{
+	padding: 8px 20px;
+}
+
+nav.Menu__Mobile ul li a{
+	color: rgb(26, 26, 26);
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+/*começa minha parte do img__header*/
+.img__header{
+    width: 100%;
+    padding: 150px 0;
+    margin: 0 auto;
+    .container{
+        @include container();
+        .img__top{
+            width: 92%;
+            padding-top: 600px;
+            background-image: url(../imagens/header-hero.png);
+            background-position: center;
+            background-size: 100% 100%;
+            margin: 0 4%;
+        }
+    }
+}
+/*termina minha parte do img__header*/
+
+/*termina meu header*/
+
+/*começa Minha__Sessao__1*/
+.Minha__Sessao__1{
+    margin: 40px 0;
+    div.line-home{
+        width: 40%;
+        height: 3px;
+        background-color: $cor-azul-escura;
+        margin: 0 auto;
+    }
+    .container{
+        @include container1();
+        .info__home p{
+            font-size: 30px;
+            text-align: center;
+            color: #2E2E2E;
+            strong{
+                font-weight: 900;
+            }
+        }
+    }
+
+    .list__item__compra{
+        width: 100%;
+        display: flex;
+        div.produto__1{
+            width: calc(100% / 3);
+            margin: 40px 2%;
+            min-height: 400px;
+            box-shadow: $efeito-box-shadow;
+            border-radius: 15px;
+            h2{
+                color: #2E2E2E;
+                font-size: 33px;
+                text-align: center;
+                padding: 8px 0;
+            }
+            p{
+                color: #666;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            div.link{
+                width: 50%;
+                margin: 0 auto;
+                p{
+                    padding: 10px 0;
+                    text-align: center;
+                    a{
+                        color: $cinza-fondao;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            div.img__produto__1{
+                width: 50%;
+                margin: 0 auto;
+                i{ 
+                    width: 100%;
+                    text-align: center;
+                    font-size: 80px;
+                    padding: 20px 0;
+                }
+            }
+        }
+        div.produto__1:hover{
+            border: 1px solid $cinza-fondao;
+            transition: 1s;
+        }
+    }
+
+}
+/*termnou Minha__Sessao__1*/
+
+/*Minha__Sessao__2*/
+.Minha__Sessao__2{
+    margin: 40px 4%;
+    .container{
+        @include container1();
+        display: flex;
+        .part__1{
+            width: 50%;
+            .line{
+                @include line();
+            }
+            h2{
+                color: #2E2E2E;
+                font-size: 33px;
+                font-weight: 300;
+                strong{
+                    font-weight: 900;
+                }
+            }
+            p{
+                color: $cinza-fondao;
+                font-size: 15px;
+                margin: 20px 0;
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                border: 0;
+                border-radius: 10px;
+                background: linear-gradient(to bottom right, #01579b , #039be5);
+                color: white;
+                font-size: 17px;
+                font-weight: 300;
+                margin: 20px 0;
+            }
+        }
+
+        .part__2{
+            width: 50%;
+            img{
+                background-position: center;
+                width: 100%;
+            }
+        }
+    }
+}
+/********/
+
+/*Minha__Sessao__3*/
+.Minha__Sessao__3{
+    margin: 40px 4%;
+    .container{
+        @include container1();
+        display: flex;
+        .part__2{
+            width: 50%;
+            img{
+                background-position: center;
+                width: 100%;
+            }
+        }
+
+        .part__1{
+            width: 50%;
+            margin: 0 4%;
+            .line{
+                @include line();
+            }
+            h2{
+                color: #2E2E2E;
+                font-size: 33px;
+                font-weight: 300;
+                strong{
+                    font-weight: 900;
+                }
+            }
+            p{
+                color: $cinza-fondao;
+                font-size: 15px;
+                margin: 20px 0;
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                border: 0;
+                border-radius: 10px;
+                background: linear-gradient(to bottom right, #01579b , #039be5);
+                color: white;
+                font-size: 17px;
+                font-weight: 300;
+                margin: 20px 0;
+            }
+        }
+
+    }
+}
+
+.Minha__Sessao__3__Mobile{display: none;}
+/********/
+
+/*Minha__Sessao__4*/
+.Minha__Sessao__4{
+    margin: 40px 4%;
+    .container{
+        @include container1();
+        display: flex;
+        .part__1{
+            width: 50%;
+            .line{
+                @include line();
+            }
+            h2{
+                color: #2E2E2E;
+                font-size: 33px;
+                font-weight: 300;
+                strong{
+                    font-weight: 900;
+                }
+            }
+            p{
+                color: $cinza-fondao;
+                font-size: 15px;
+                margin: 20px 0;
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                border: 0;
+                border-radius: 10px;
+                background: linear-gradient(to bottom right, #01579b , #039be5);
+                color: white;
+                font-size: 17px;
+                font-weight: 300;
+                margin: 20px 0;
+            }
+        }
+
+        .part__2{
+            width: 50%;
+            img{
+                background-position: center;
+                width: 100%;
+            }
+        }
+    }
+}
+/******/
+
+/*Minha__Sessao__5*/
+.Minha__Sessao__5{
+    margin: 50px 0;
+
+    .container{
+        @include container1();
+        display: flex;
+        .img__sessao__5{
+            width: 46%;
+            margin: 0 4%;
+            max-height: 500px;
+            img{
+                width: 100%;
+                background-size: 100% 100%;
+            }
+            img:last-child{
+                width: 80%;
+                z-index: -1;
+                position: relative;
+                top: -270px;
+                left: -50px;
+            }
+        }
+        .paragrafo__sessao__5{
+            width: 50%;
+            max-height: 500px;
+            .line{
+                @include line();
+            }
+            h2{
+                font-size: 33px;
+                font-weight: 300;
+                strong{
+                    font-weight: 900;
+                    color: $cinza-fondao;
+                }
+            }
+            p{
+                color: #2E2E2E;
+                font-size: 15px;
+                margin: 15px 0;
+            }
+            .info__site{
+                width: 100%;
+                display: flex;
+                
+                .cor-azul-lith-div{
+                    background: linear-gradient(#33c8c1 0%, #119bd2 100%);
+                }
+                .cor-rosa-lith-div{
+                    background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+                }
+                .cor-azul-div{
+                    background: linear-gradient(#361cc1 0%, #2e82ef 100%);
+                }
+                div{
+                    width: 33.333%;
+                    padding: 20px 20px;
+                    margin: 0 2%;
+                    border-radius: 30px;
+                    h2{
+                        text-align: center;
+                        color: white;
+                        font-size: 33px;
+                        font-weight: 300;
+                    }
+                    p{
+                        color: white;
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+/*******/
+
+/*Minha__Sessao__6*/
+.Minha__Sessao__6{
+
+    .container{
+        @include container1();
+        
+          
+            .alinha__titulo{
+                .line{
+                    width: 300px;
+                    height: 4px;
+                    background-color: $cor-rosa;
+                    margin: 0 auto;
+                }
+                h2{
+                    color: $cinza-fondao;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 300;
+                }
+            }
+            .flex__alinhe{display: flex;
+                .info__pessoas{
+                    width: 33%;
+                    margin: 30px 2%;
+                    min-height: 450px;
+                    box-shadow: 2px 1px 20px 0px rgba(0,0,0,0.75);
+                    .pessoa{
+                        width: 100%;
+                        max-width: 100%;
+                        padding-top: 250px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        background-image: url(../imagens/team/team-1.png);
+                     
+                        .redes__icones{
+                            width: 50%;
+                            margin: 0px auto;
+                            border-radius: 20px;
+                            background-color: rgba(255, 255, 255, 0.527);
+                            position: relative;
+                            bottom: 20px;
+                            p{text-align: center;
+                                i{
+                                    color: white;
+                                    font-size: 27px;
+                                    padding: 20px 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .nomes__pessoas{
+                        margin: 20px 10px;
+                        h2{
+                            margin: 10px 0;
+                            color: $cinza-fondao;
+                            font-size: 29px;
+                        }
+                        p{
+                            font-size: 19px;
+                            color: $cinza-fondao;
+                        }
+                    }
+                }
+            }
+
+
+            .slider{
+                > div{
+                    padding: 20px 0;
+                    display: flex;
+                    .icones{
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0 4%;
+                        i{  
+                            font-size: 29px;
+                            color: black;
+                        }
+
+                        div{
+                            i{
+                                font-size: 20px;
+                                color: $cinza-fondao;
+                            }
+                        }
+                    }
+
+                    .paragrafo{
+                        margin: 8px 4%;
+                    }
+
+                    .img__pessoa{
+                        display: flex;
+                        margin: 0 4%;
+                        .Img__perfil{
+                            width: 50%;
+                            height: 150px;
+                            margin: 40px 0;
+                            background-image: url(../imagens/team/team-1.png);
+                            background-size: 100% 100%;
+                            border-radius: 50%;
+                        }
+                        .Nome__cargo{
+                            margin: 8px 10px;
+                            width: 50%;
+                            h2{
+                                position: relative;
+                                top: 40%;
+                                transform: translateY(-40%);
+                                color: $cinza-fondao;
+                            }
+                            p{
+                                position: relative;
+                                top: 30%;
+                                transform: translateY(-30%);
+                                color: $cinza-fondao;
+                            }
+                        }
+                    }
+                }
+            }
+
+    }
+}
+/**********/
+
+/*.Minha__Sessao__7*/
+.Minha__Sessao__7{
+    margin: 40px 0 90px 0;
+    .container{
+        @include container();
+        .titulo{
+            margin: 0 auto;
+            .line{
+                width: 100%;
+                max-width: 600px;
+                height: 3px;
+                margin: 0 auto;
+                background-color: $cor-azul-escura;
+            }
+            h2{
+                color: $cinza-fondao;
+                font-size: 30px;
+                font-weight: normal;
+                text-align: center;
+                strong{
+                    font-weight: 900;
+                }
+            }
+        }
+    }  
+
+    .flex__item{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 4%;
+
+        .blogs{
+            width: 33.33%;
+            min-height: 350px;
+            padding: 20px 2%;
+            background-color: $cor-branca;
+            .img__blogs{
+                width: 100%;
+                padding: 100px 0;
+                max-width: 100%;
+                background-size: 100% 100%;
+            }
+
+            .sobre__blogs{
+                p:first-child{
+                    color: $cinza-fondao;
+                    font-size: 14px;
+                    padding: 8px 0;
+                }
+                p:last-child{
+                    color: $cinza-fondao;
+                    font-size: 19px;
+                }
+            }
+            a{
+                color: #fe8464;
+                font-size: 19px;
+                padding: 8px 0;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+/**********/
+
+/*Minha__Sessa__8*/
+.Minha__Sessao__8{
+    width: 100%;
+    height: 100%;
+    margin: 40px 0 0 0;
+    position: relative;
+    bottom: -40px;
+    background-color: $cor-azul-escura;
+   
+    .container{
+        @include container1();
+        .sessao__novas__mensagens{
+            width: 92%;
+            background-color: $cor-branca;
+            position: relative;
+            top: -50px;
+            padding: 50px 0;
+            box-shadow: 0px 0px 24px 9px rgba(0,0,0,0.45);
+            border-radius: 20px;
+            margin: 0 4%;
+            display: flex;
+            .info__mensagem{
+                h2{
+                    color: $cinza-fondao;
+                    font-size: 29px;
+                    font-weight: 300;
+                    margin: 0 2%;
+                }
+            }
+            form{
+                width: 100%;
+                input[type=email]{
+                    width: 75%;
+                    padding: 10px 10px;
+                    margin: 20px 0;
+                    border: 1px solid $cor-cinza-ligth;
+                }
+                input[type=submit]{
+                    width: 22%;
+                    position: relative;
+                    left: -5px;
+                    padding: 11px 0;
+                    margin: 20px 0;
+                    background: linear-gradient(to bottom right,#01579b,#039be5);
+                    color: white;
+                    cursor: pointer;
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+        width: 100%;
+        margin: 40px 0;
+        .container{
+            @include container1();
+            display: flex;
+            .Informacao__empresas{
+                width: 33.33%;
+                margin: 0 2%;
+                .Logo__empresa{
+                    width: 100%;
+                    padding: 30px 0;
+                    background-image: url(../imagens/logo.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .Sobre__empresa{
+                    p{
+                        margin: 0 2% 10px 2%;
+                        color: $cor-branca;
+                        font-size: 15px;
+                    }
+                }
+
+                .Social__empresa{
+                    i{
+                        font-size: 19px;
+                        cursor: pointer;
+                        padding: 10px 2%;
+                        color: $cor-branca;
+                    }
+                }
+            }
+
+            .Recurso__emrpesa{
+                width: $w33;
+                h2{
+                    color: $cor-branca;
+                    text-align: center;
+                    font-size: 28px;
+                    font-weight: 300;
+                }
+                a{
+                    color: $cor-branca;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 15px;
+                    display: block;
+                    padding: 8px 0;
+                }
+            }
+
+            .Contato__empresa{
+                width: $w33;
+                margin: 0 2%;
+                h2{
+                    color: $cor-branca;
+                    font-size: 28px;
+                    font-weight: 300;
+                    text-align: center;
+                }
+
+                span{
+                    text-align: center;
+                    font-size: 15px;
+                    color: $cor-branca;
+                    display: block;
+                    padding: 8px 0;
+                }
+            }
+
+        }
+    }
+
+    .ultimo__footer{
+        .container{
+            @include container();
+            display: block;
+            .line{
+                width: 100%;
+                max-width: 1100px;
+                height: 3px;
+                background-color: $cor-branca;
+            }
+
+            .footer__direitos{
+                width: 100%;
+                p{
+                    padding: 10px 0;
+                    font-size: 15px;
+                    color:$cor-branca;
+                    a{
+                        text-decoration: none;
+                        font-weight: bolder;
+                        color: white;
+                    }
+                    a:hover{
+                        transition: 1s;
+                        color:$cinza-fondao;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+/**********/
+
+/*BotaoGod*/
+    .Botao__God{
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 0;
+        margin: 0 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: $cor-azul-btn;
+        border: 2px solid white;
+        z-index: 99999;
+        cursor: pointer;
+        i{
+            font-size: 44px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: $cor-branca;
+        }
+    }
+/**/
+
+/*minha media query*/
+@media screen and (max-width: 1024px) {
+
+    .Botao__God{
+        display: none;
+        position: fixed;
+        bottom: 50px;
+        right: 0;
+        margin: 0 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: $cor-azul-btn;
+        z-index: 99999;
+        cursor: pointer;
+        i{
+            font-size: 44px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: $cor-branca;
+        }
+    }
+
+    .Menu__Mobile {
+        display: block;
+    }
+    div.nav-links nav {
+        display: none;
+    }
+
+    .Minha__Sessao__5{
+        .container{
+            display: block;
+            .img__sessao__5{
+                width: 92%;
+                margin: 0 4%;
+                max-height: none;
+                img{
+                    width: 100%;
+                    
+                    background-size: 100% 100%;
+                }
+                img:last-child{
+                    display: none;
+                }
+            }
+
+            .paragrafo__sessao__5{
+                width: 92%;
+                margin: 40px 4%;
+            }
+        }
+    }
+
+    .Minha__Sessao__6{
+        .container{
+            .flex__alinhe{
+                display: block;
+                .info__pessoas{
+                    width: 80%;
+                    margin: 30px auto;
+                    background-repeat: none;
+
+                }
+            }
+        }
+    }
+
+    .Minha__Sessao__7{
+        .container{
+            margin-top: 100px;
+
+            .flex__item{
+                display: block;
+                .blogs{
+                    width:  80%;
+                    margin: 0px auto;
+                    
+                }
+            }
+        }
+    }
+
+    .Minha__Sessao__8{
+        .container{
+            .footer{
+                .container{
+                    display: block;
+
+                    .Informacao__empresas{
+                        width: $w100;
+                        margin: 10px 0 0 0;
+                    }
+
+                    .Recurso__emrpesa{
+                        width: $w100;
+                        margin: 10px 0 0 0;
+                        .line{
+                            width: $w100;
+                            max-width: 600px;
+                            height: 2px;
+                            background-color: $cor-branca;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .Contato__empresa{
+                        width: $w100;
+                        margin: 10px 0 0 0;
+                        .line{
+                            width: $w100;
+                            max-width: 600px;
+                            height: 2px;
+                            background-color: $cor-branca;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    .bx-wrapper{
+        display: none;
+    }
+    .slider{
+        display: none;
+    }
+
+
+    .Minha__Sessao__1{
+        .list__item__compra{
+            display: inline-block;
+            div.produto__1 {
+                width: 92%;
+                margin: 40px 4%;
+            }
+        }
+    }
+
+    .Minha__Sessao__2{
+        margin: 0 8%;
+        .container{
+            display: inline-block;
+            .part__1{
+                width: 100%;
+            }
+            .part__2{
+                width: 100%;
+                
+            }
+        }
+    }
+
+    .Minha__Sessao__3{display: none;}
+
+    .Minha__Sessao__3__Mobile{
+        margin: 40px 4%;
+        display: inline-block;
+        .container{
+            @include container1();
+            .part__1{
+                width: 92%;
+                margin: 0 4%;
+                .line{
+                    @include line();
+                }
+                h2{
+                    color: #2E2E2E;
+                    font-size: 33px;
+                    font-weight: 300;
+                    strong{
+                        font-weight: 900;
+                    }
+                }
+                p{
+                    color: $cinza-fondao;
+                    font-size: 15px;
+                    margin: 20px 0;
+                }
+                button{
+                    width: 150px;
+                    height: 50px;
+                    border: 0;
+                    border-radius: 10px;
+                    background: linear-gradient(to bottom right, #01579b , #039be5);
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 300;
+                    margin: 20px 0;
+                }
+            }
+    
+            .part__2{
+                width: 92%;
+                margin: 0 4%;
+                img{
+                    background-position: center;
+                    
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .Minha__Sessao__4{
+        .container{
+            margin: 0 4%;
+            display: block;
+            .part__1{
+                width: $w100;
+            }
+            .part__2{
+                width: $w100;
+            }
+        }
+    }
+
+    .Minha__Sessao__8{
+        .container{
+            
+            .sessao__novas__mensagens{
+                display: block;
+                .info__mensagem h2 {
+                    text-align: center;
+                    margin: 0;
+                }
+                form{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
