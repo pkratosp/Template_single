@@ -1,196 +1,726 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Projeto Vídeo Chat</title>
-	<script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
-</head>
-<body>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/style.min.css">
+		<link rel="stylesheet" href="assets/css/bxSlider/jquery.bxslider.css">
+		<link rel="shortcut icon" type="image-x/png" href="assets/imagens/favicon.png">
+		<script src="https://kit.fontawesome.com/e603a9b5dc.js" crossorigin="anonymous"></script>
+		<title>Meu Projeto</title>
+	</head>
 
-	<style type="text/css">
-		.welcome{
-			text-align: center;
-			padding: 10px 0;
-		}
+	<body id="corpo">
 
-		body{
-			display: flex;
-			height: 100vh;
-			margin: 0;
-			align-items: center;
-			justify-content: center;
-			padding: 0 50px;
-		}
+		<header id="header">
+			<div class="nav-bar">
+				<div class="container alinhe__com__display">
+
+					<svg class="logo1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20%" height="89px" viewBox="0 0 111.196 30.566" style="padding: 25px 20px;">
+						<defs>
+						  <linearGradient id="linear-gradient" x1="0.5" x2="1.275" y2="0.725" gradientUnits="objectBoundingBox">
+							<stop offset="0" stop-color="#fe8464"/>
+							<stop offset="1" stop-color="#fe6e9a"/>
+						  </linearGradient>
+						</defs>
+						<g id="Group_2" data-name="Group 2" transform="translate(-372.804 -44.291)">
+						  <text id="BASIC" transform="translate(409 68)" fill="#2e2e2e" font-size="24" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">BASIC</tspan></text>
+						  <path id="Subtraction_1" data-name="Subtraction 1" d="M9.126,19.253h0a8.835,8.835,0,0,1-6.453-2.82A9.835,9.835,0,0,1,0,9.626,9.835,9.835,0,0,1,2.673,2.82,8.835,8.835,0,0,1,9.126,0V19.252Z" transform="translate(382.43 45.489) rotate(30)" fill="url(#linear-gradient)"/>
+						  <path id="Subtraction_2" data-name="Subtraction 2" d="M13.694,0h0A13.694,13.694,0,0,0,4.011,23.377a13.6,13.6,0,0,0,9.683,4.011V0Z" transform="translate(395.769 74.857) rotate(-150)" fill="#2e2e2e"/>
+						</g>
+					  </svg>
+					  
+					<div class="logo Nlogo"></div><!--logo-->
+					<div class="nav-links">
+						<nav>
+							<ul>
+								<li>
+									<a href="index.html" class="home" id="page-scroll">Home</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#sobre" class="sobre" id="page-scroll">Sobre</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#contato" class="contato" id="page-scroll">Mais</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#mais" class="mais" id="page-scroll">Portifolio</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#portifolio" class="portifolio" id="page-scroll">Contato</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#team" class="team" id="page-scroll">Team</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#ultimo" class="ultimo" id="page-scroll">ultimo</a>
+									<div class="line"></div>
+								</li>
+							</ul>
+						</nav>
+					</div><!--nav-links-->
+
+						
+						<nav class="Menu__Mobile">
+							<i id="icone" class="fas fa-align-right"></i>
+							<ul id="menu__ul">
+								<li>
+									<a href="index.html" class="home" id="page-scroll">Home</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#sobre" class="sobre" id="page-scroll">Sobre</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#contato" class="contato" id="page-scroll">Mais</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#mais" class="mais" id="page-scroll">Portifolio</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#portifolio" class="portifolio" id="page-scroll">Contato</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#team" class="team" id="page-scroll">Team</a>
+									<div class="line"></div>
+								</li>
+								<li>
+									<a href="#team" class="team" id="page-scroll">ultimo</a>
+									<div class="line"></div>
+								</li>	
+							</ul>
+						</nav>
+
+				</div><!--container-->
+			</div><!--alinhe__com__display-->
+
+			<div class="img__header">
+				<div class="container">
+
+					<div class="img__top"></div>
+
+				</div><!--container-->
+			</div><!--img__header-->
+		
+
+			<div class="marca-pratrocinio">
+				<div class="container animate__bounceInUp">
+					<img src="assets/imagens/brand-1.png" alt="logo1">
+					<img src="assets/imagens/brand-2.png" alt="logo2">
+					<img src="assets/imagens/brand-3.png" alt="logo3">
+					<img src="assets/imagens/brand-4.png" alt="logo4">
+					<img src="assets/imagens/brand-5.png" alt="logo5">
+				</div>
+			</div><!--marca-pratrocinio-->
+			
+		</header>
+			
+		<section target="sobre" id="sobre" class="Minha__Sessao__1 section">
+			<div class="line-home"></div><!--line-home-->
+			<div class="container">
+				<div class="info__home">
+					<p><strong>Clean and simple design,</strong>  Comes with everything <br> you need to get started!</p>
+				</div><!--info__home-->
+				
+				<div class="list__item__compra">
+					<div class="produto__1">
+						<div class="img__produto__1">
+							<i class="fab fa-angrycreative"></i>
+						</div><!--img__produto__1-->
+						<h2>Clean</h2>
+						<p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+						<div class="link">
+							<p><a href="#">Lear More ></a></p>
+						</div>
+					</div><!--produto__1-->
+
+					<div class="produto__1">
+						<div class="img__produto__1">
+							<i class="fab fa-angrycreative"></i>
+						</div><!--img__produto__1-->
+						<h2>Clean</h2>
+						<p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+						<div class="link">
+							<p><a href="#">Lear More ></a></p>
+						</div>
+					</div><!--produto__1-->
+
+					<div class="produto__1">
+						<div class="img__produto__1">
+							<i class="fab fa-angrycreative"></i>
+						</div><!--img__produto__1-->
+						<h2>Clean</h2>
+						<p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+						<div class="link">
+							<p><a href="#">Lear More ></a></p>
+						</div>
+					</div><!--produto__1-->
+
+				</div><!--list__item__compra-->
+				
+			</div><!--container-->
+		</section><!--Minha__Sessao__1 section-->
+		
+		<section target="sobre" id="sobre" class="Minha__Sessao__2 section">
+			<div class="container">
+				<div class="part__1">
+					<div class="line"></div>
+					<h2><strong>Quick & Easy</strong> to Use Bootstrap Template</h2>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+					<button>Try it free</button>
+		
+				</div><!--part__1-->
+
+				<div class="part__2">
+					<img src="assets/imagens/about1.svg" alt="about">
+				</div><!--part__2-->
+			</div><!--container-->
+		</section><!--Minha__Sessao__2 section-->
+		
+		<section target="contato" id="contato" class="Minha__Sessao__3 section">
+			<div class="container">
+				<div class="part__2">
+					<img src="assets/imagens/about2.svg" alt="about">
+				</div><!--part__2-->
+
+				<div class="part__1">
+					<div class="line"></div>
+					<h2><strong>Quick & Easy</strong> to Use Bootstrap Template</h2>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+					<button>Try it free</button>
+				</div><!--part__1-->
+
+			</div><!--container-->
+		</section><!--Minha__Sessao__3 section-->
 
 
-		video{
-			max-width: calc(50% - 100px);
-			margin: 0 50px;
-			box-sizing: border-box;
-			border-radius: 2px;
-			padding: 0;
-			border:1px solid #ccc;
-		}
+		<section id="contato" class="Minha__Sessao__3__Mobile section">
+			<div class="container">
+				
+				<div class="part__1">
+					<div class="line"></div>
+					<h2><strong>Quick & Easy</strong> to Use Bootstrap Template</h2>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+					<button>Try it free</button>
+				</div><!--part__1-->
 
-		.title{
-			position: fixed;
-			top: 10px;
-			left: 50%;
-			transform:translate(-50%,0);
-			font-size: 30px;
-		}
+				<div class="part__2">
+					<img src="assets/imagens/about2.svg" alt="about">
+				</div><!--part__2-->
 
-	</style>
+			</div><!--container-->
+		</section><!--Minha__Sessao__3__Mobile section-->
 
-	<div class="title">Bem-vindo ao chat em tempo real!</div>
+
+		
+		<section target="mais" id="mais" class="Minha__Sessao__4 section">
+			<div class="container">
+				<div class="part__1">
+					<div class="line"></div>
+					<h2><strong>Quick & Easy</strong> to Use Bootstrap Template</h2>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+					<button>Try it free</button>
+		
+				</div><!--part__1-->
+
+				<div class="part__2">
+					<img src="assets/imagens/about3.svg" alt="about">
+				</div><!--part__2-->
+			</div><!--container-->
+		</section><!--Minha__Sessao__4 section-->
+		
+		<section target="portifolio" id="portifolio" class="Minha__Sessao__5 section">
+			<div class="container">
+				<div class="img__sessao__5">
+					<img src="assets/imagens/video.png" alt="video">
+					<img src="assets/imagens/dots_do_video.svg">
+				</div><!--img__sessao__5-->
 	
+				<div class="paragrafo__sessao__5">
+					<div class="line"></div>
+					<h2><strong>Quick & Easy</strong> to Use Bootstrap Template</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate natus accusamus sed vitae officia dolor repellat? Maiores molestiae debitis repellat quos, ullam autem possimus dolores odit explicabo, earum nobis quaerat.</p>
+					<section class="info__site">
+						<div class="info__1 cor-azul-lith-div">
+							<h2>125K</h2>
+							<p>Downloads</p>
+						</div>
+						<div class="info__2 cor-rosa-lith-div">
+							<h2>87K</h2>
+							<p>Active Users</p>
+						</div>
+						<div class="info__3 cor-azul-div">
+							<h2>4.8</h2>
+							<p>User Rating</p>
+						</div>
+					</section><!--info__site-->
+				</div><!--paragrafo__sessao__5-->
+			</div><!--container-->
+		</section><!--Minha__Sessao__5 section-->
+		
+		<section target="team" id="team" class="Minha__Sessao__6 section">
+			<div class="container">
+				<div class="alinha__titulo">
+					<div class="line"></div>
+					<h2>Meet Our <strong>Creative Team Members</strong></h2>
+				</div><!--alinha__titulo-->
 
-	<video id="localVideo" autoplay muted></video>
-	<video id="remoteVideo" autoplay></video>
+			
+					<div class="flex__alinhe">
+						<div class="info__pessoas">
+							<div class="pessoa">
+								<div class="redes__icones">
+									<p>
+										<i class="fab fa-facebook-f"></i>
+										<i class="fab fa-twitter"></i>
+										<i class="fab fa-instagram"></i>
+										<i class="fab fa-linkedin"></i>
+									</p>
+								</div><!--redes__icones-->
+							</div><!--pessoa-->
+							
+							<div class="nomes__pessoas">
+								<h2>Pessoa Nome</h2>
+								<p>Founder and CEO</p>
+							</div><!--nomes__pessoas-->
+						</div><!--info__pessoas-->
 
-	<script>
-		//Início ScaleDrone e WebRTC
-		if(!location.hash){
-			location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
-		}
+						<div class="info__pessoas">
+							<div class="pessoa">
+								<div class="redes__icones">
+									<p>
+										<i class="fab fa-facebook-f"></i>
+										<i class="fab fa-twitter"></i>
+										<i class="fab fa-instagram"></i>
+										<i class="fab fa-linkedin"></i>
+									</p>
+								</div><!--redes__icones-->
+							</div><!--pessoa-->
+							
+							<div class="nomes__pessoas">
+								<h2>Pessoa Nome</h2>
+								<p>Founder and CEO</p>
+							</div><!--nomes__pessoas-->
+						</div><!--info__pessoas-->
 
-		const roomHash = location.hash.substring(1);
+						<div class="info__pessoas">
+							<div class="pessoa">
+								<div class="redes__icones">
+									<p>
+										<i class="fab fa-facebook-f"></i>
+										<i class="fab fa-twitter"></i>
+										<i class="fab fa-instagram"></i>
+										<i class="fab fa-linkedin"></i>
+									</p>
+								</div><!--redes__icones-->
+							</div><!--pessoa-->
+							
+							<div class="nomes__pessoas">
+								<h2>Pessoa Nome</h2>
+								<p>Founder and CEO</p>
+							</div><!--nomes__pessoas-->
+						</div><!--info__pessoas-->
 
-		const drone = new ScaleDrone('yiS12Ts5RdNhebyM');
+					</div><!--flex__alinhe-->
+	
+					<div class="slider">
+						<div>
+							<div class="slide__1">
 
-		const roomName = 'observable-'+roomHash;
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
 
-		const configuration = {
-
-			iceServers:[
-
-				{
-					urls: 'stun:stun.l.google.com:19302'
-				}
-
-			]
-
-		}
-
-		let room;
-		let pc;
-
-		let number = 0;
-
-
-		function onSuccess(){};
-
-		function onError(error){
-			console.log(error);
-		};
-
-
-		drone.on('open', error => {
-			if(error)
-				return console.log(error);
-
-			room = drone.subscribe(roomName);
-
-
-			room.on('open',error=>{
-				//Se acontecer erro, capturamos aqui!
-
-			});
-
-			room.on('members', members=>{
-
-				//console.log("Conectado!");
-
-				//console.log("Conexões abertas: "+ members.length);
-				number = members.length - 1;
-				const isOfferer = members.length >= 2;
-
-				startWebRTC(isOfferer);
-
-			})
-
-		});
-
-		function sendMessage(message){
-			drone.publish({
-				room: roomName,
-				message
-			})
-		}
-
-
-		function startWebRTC(isOfferer){
-
-
-			pc = new RTCPeerConnection(configuration);
-
-			pc.onicecandidate = event =>{
-				if(event.candidate){
-					sendMessage({'candidate':event.candidate});
-				}
-			};
-
-
-			if(isOfferer){
-				pc.onnegotiationneeded = () =>{
-					pc.createOffer().then(localDescCreated).catch(onError);
-				}
-			}
-
-
-
-			pc.ontrack = event =>{
-				const stream = event.streams[0];
-
-
-				if(!remoteVideo.srcObject || remoteVideo.srcObject.id !== stream.id){
-					remoteVideo.srcObject = stream;
-				}
-			}
-
-
-			navigator.mediaDevices.getUserMedia({
-				audio: true,
-				video: true,
-			}).then(stream => {
-				localVideo.srcObject =  stream;
-				stream.getTracks().forEach(track=>pc.addTrack(track,stream))
-			}, onError)
-
-			room.on('member_leave',function(member){
-				//Usuário saiu!
-				remoteVideo.style.display = "none";
-			})
-
-			room.on('data',(message, client)=>{
-
-				if(client.id === drone.clientId){
-					return;
-				}
-
-				if(message.sdp){
-					pc.setRemoteDescription(new RTCSessionDescription(message.sdp), () => {
-						if(pc.remoteDescription.type === 'offer'){
-							pc.createAnswer().then(localDescCreated).catch(onErrror);
-						}
-					}, onError)
-				}else if(message.candidate){
-					pc.addIceCandidate(
-						new RTCIceCandidate(message.candidate), onSuccess, onError
-					)
-				}
-
-			})
-
-		}
-
-		function localDescCreated(desc){
-			pc.setLocalDescription(
-				desc, () => sendMessage({'sdp': pc.localDescription}), onError
-			);
-		}
+							</div><!--slide__1-->
 
 
-	</script>
+							<div class="slide__2">
 
-</body>
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__2-->
+
+
+							<div class="slide__3">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__3-->
+						</div>
+
+						<!--segunda coluna-->
+
+						<div>
+							<div class="slide__1">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__1-->
+
+
+							<div class="slide__2">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__2-->
+
+
+							<div class="slide__3">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__3-->
+						</div>
+
+						<!--terceira coluna-->
+
+						<div>
+							<div class="slide__1">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__1-->
+
+
+							<div class="slide__2">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__2-->
+
+
+							<div class="slide__3">
+
+								<div class="icones">
+									<i class="fas fa-quote-right"></i>
+									<div>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+								</div>
+	
+								<div class="paragrafo">
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime autem, tenetur porro nam hic corrupti aperiam repellat dolor aliquid magni, ad dolorem vitae, voluptas illo tempore sapiente suscipit? Possimus, et.</p>
+								</div>
+	
+								<div class="img__pessoa">
+									<div class="Img__perfil"></div>
+									<div class="Nome__cargo">
+										<h2>Nome Sobrenome</h2>
+										<p>CEO, SpaceX</p>
+									</div>
+								</div>
+
+							</div><!--slide__3-->
+						</div>
+
+					</div><!--slider-->
+				
+
+			</div><!--container-->
+		</section><!--Minha__Sessao__6 section-->
+
+
+		<section target="ultimo" id="ultimo" class="Minha__Sessao__7 section">
+			<div class="container">
+				<div class="titulo">
+					<div class="line"></div>
+					<h2>Our Recent<strong>Blog Posts</strong></h2>
+				</div><!--titulo-->
+
+				<div class="flex__item">
+					<div class="blogs">
+						<div style="background-image: url(assets/imagens/blog/blog-1.jpg);" class="img__blogs"></div><!--img__blogs-->
+						<div class="sobre__blogs">
+							<p>Posted By: Admin  <span>03 June, 2023</span></p>
+							<p>Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+						</div><!--sobre__blogs-->
+						<a href="#">Learn More ></a>
+					</div><!--blogs-->
+
+					<div class="blogs">
+						<div style="background-image: url(assets/imagens/blog/blog-2.jpg);" class="img__blogs"></div><!--img__blogs-->
+						<div class="sobre__blogs">
+							<p>Posted By: Admin  <span>03 June, 2023</span></p>
+							<p>Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+						</div><!--sobre__blogs-->
+						<a href="#">Learn More ></a>
+					</div><!--blogs-->
+
+					<div class="blogs">
+						<div style="background-image: url(assets/imagens/blog/blog-3.jpg);" class="img__blogs"></div><!--img__blogs-->
+						<div class="sobre__blogs">
+							<p class="primeiro">Posted By: Admin  <span>03 June, 2023</span></p>
+							<p>Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+						</div><!--sobre__blogs-->
+						<a href="#">Learn More ></a>
+					</div><!--blogs-->
+
+
+				</div><!--flex__item-->
+
+			</div><!--container-->
+		</section><!--Minha__Sessao__7 section-->
+
+
+		<section target="ultimo" id="ultimo" class="Minha__Sessao__8 section">
+			<div class="container">
+				
+				<div class="sessao__novas__mensagens">
+					<div class="info__mensagem">
+						<h2>Subscribe Our Newsletter get reguler updates</h2>
+					</div><!--info__mensagem-->
+					<form id="form">
+						<input type="email" placeholder="Digite seu email..." required>
+						<input type="submit" value="Enviar!">
+					</form>
+				</div><!--sessao__novas__mensagens-->
+
+
+				<footer class="footer">
+					<div class="container">
+
+						<div class="Informacao__empresas">
+						
+							<div class="Logo__empresa"></div><!--Logo__empresa-->
+							<div class="Sobre__empresa">
+								<p>Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+							</div><!--Sobre__empresa-->
+							
+							<div class="Social__empresa">
+								<i class="fab fa-facebook-f"></i>
+								<i class="fab fa-instagram"></i>
+								<i class="fab fa-linkedin"></i>
+								<i class="fab fa-twitter"></i>
+							</div><!--Social__empresa-->
+	
+						</div><!--Informacao__empresas-->
+
+						<div class="Recurso__emrpesa">
+							<div class="line"></div>
+							<h2>Lorem ipsum</h2>
+							<a href="index.html">Home</a>
+							<a href="index.html">Sobre</a>
+							<a href="index.html">Maisa</a>
+							<a href="index.html">Novos</a>
+							<a href="index.html">Contato</a>
+						</div><!--Recurso__empresa-->
+
+						<div class="Contato__empresa">
+							<div class="line"></div>
+							<h2>Lorem ipsum</h2>
+							<span>+809272561823</span>
+							<span>info@gmail.com</span>
+							<span>www.yourweb.com</span>
+							<span>123 Stree New York City , United
+								States Of America 750.</span>
+						</div><!--Contato__empresa-->
+
+					</div><!--container-->
+
+					<footer class="ultimo__footer">
+						<div class="container">
+							<div class="line"></div>
+							<div class="footer__direitos">
+								<p>Todos os direitos são reservados <a href="index.html">Empresa</a></p>
+							</div>
+						</div><!--container-->
+					</footer><!--ultimo__footer-->
+				</footer>
+
+			</div><!--container-->
+		</section><!--Minha__Sessao__8-->
+
+
+		<div id="BotaoGod" class="Botao__God">
+			<a href="#">
+				<i class="fas fa-angle-up"></i>
+			</a>
+		</div><!--Botao__God-->
+		
+		<script src="assets/js/jquery/jquery.js"></script>
+		<script src="assets/js/bxSlider/jquery.bxslider.js"></script>
+		<script src="assets/js/myScript.js"></script>
+	</body>
 </html>
